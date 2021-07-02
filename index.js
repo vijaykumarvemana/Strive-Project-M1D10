@@ -32,3 +32,64 @@ for (let i=0, t=100; i<t; i++) {
     arrayRandomNumbers.push(Math.round(Math.random() * t))
 }
 console.log(arrayRandomNumbers)
+
+const minMax = function (array){
+let maxValue = array[0]
+for (let i = 1; i < array.length; i++) {
+        if (array[i] > maxValue) {
+           maxValue  = array[i]
+        }
+    }
+
+console.log(maxValue)
+
+let minvalue = array[0]
+for (let i = 1; i < array.length; i++){
+  if (array[i] < minvalue) {
+     minvalue  = array[i]
+  }
+}
+
+console.log(minvalue)
+
+}
+
+minMax(arrayRandomNumbers)
+
+
+let arr = []
+for(let i = 0; i < 4; i++){
+     let current = []
+     for(let j = 0; j < 10; j++)
+          current.push(Math.floor(Math.random() * 10))
+     arr.push(current)
+}
+console.log(arr)
+
+
+const longestArray = function (array1, array2){
+    if(array1.length > array2.length){
+        console.log(array1)
+    }else{
+        console.log(array2)
+    }
+}
+longestArray([1,2,4,6,7], [3, 4, 5])
+
+const sumOfArray = function (array1, array2) {
+    let sum1 = 0
+    for(i = 0; i < array1.length; i++){
+        sum1 += array1[i]
+    }
+    let sum2 = 0
+    for(i = 0; i < array2.length; i++){
+        sum2 += array2[i]
+    }
+    if(sum1 > sum2){
+        console.log(sum1)
+    }else{
+        console.log(sum2)
+    }
+    
+}
+sumOfArray([1,3,5,6], [34,67,2,0])

@@ -1,0 +1,13 @@
+table, th, td {
+    border: 1px solid black;
+  }
+  img{
+      height: 35px;
+      width: 35px;
+  }
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(8, 8, 8);
+    color: white;
+   }

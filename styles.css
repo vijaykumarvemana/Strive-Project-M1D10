@@ -1,6 +1,22 @@
+
+body { 
+    max-width: 100%;
+    text-align: center; 
+}
+#center{ 
+    width: 900px;
+     text-align: left;
+      margin: 0px auto; }
 table, th, td {
     border: 1px solid black;
   }
+  td{
+      border-color: rgb(3, 252, 3);
+  }
+  tr.dotted td 
+{
+    border-bottom: dotted 1px black;
+}
   img{
       height: 35px;
       width: 35px;
@@ -10,4 +26,24 @@ table, th, td {
     padding: 3px;
     background-color: rgb(8, 8, 8);
     color: white;
+   }
+   h1{
+       text-align: center;
+   }
+   a{
+      color: brown; 
+      background-color: darkblue;
+   }
+   .boarder{
+       border-radius: 10px;
+   }
+   p{
+       margin:24px ;
+   }
+   .font-size-bold{
+       font-size: 35px;
+       font-weight: bold;
+   }
+   .hide{
+       visibility: hidden;
    }

@@ -10,8 +10,12 @@
               28) Create an array of arrays, in which every array has 10 random numbers
               29) Create a function that gets 2 arrays and returns the longest one
               30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
+              
        */
 
+window.onload = function(){
+    console.log("page loaded")
+}
 let x = "John"
 let y = "Doe"
 console.log(x +"<>"+ y)
@@ -93,3 +97,58 @@ const sumOfArray = function (array1, array2) {
     
 }
 sumOfArray([1,3,5,6], [34,67,2,0])
+
+    /*  
+        31) Get element with ID "container" from the page
+        32) Get every "td" from the page
+        33) Create a cycle that prints the text inside every td of the page
+        34) Write a function to change the heading of the page
+        35) Write a function to add an extra row to the table
+        36) Write a function to add the class "test" to each row in the table
+        37) Write a function to add a red background to every link in the page
+        38) Console log "Page loaded" when the page is correctly loaded
+        39) Write a function to add new items to a UL
+        40) Write a function to empty a list
+    */    
+const gettingIdContainer = function () {
+    const idElement = document.getElementById('center')
+    console.log(idElement)
+}
+gettingIdContainer()
+
+const everyTdElement = function () {
+    const everyTd = document.querySelectorAll(' td')
+    for(let td of everyTd){
+    console.log(td.innerHTML)
+    }
+}
+ everyTdElement()
+/*const addTableRow = function(){
+    let add = document.getElementsByTagName('.dotted td')
+    const extraRow = document.createElement('td')  
+    extraRow.innerText = 'vijay'
+    add.appendChild(extraRow)
+ }
+addTableRow()*/
+const colorChange = function () {
+    let links = document.querySelectorAll('a')
+    for(let link of links){
+        link.style.backgroundColor = "yellow"
+    } 
+}
+colorChange()
+const addItemsInUl = function (content) {
+    const ul = document.querySelector(" div ul");
+    ul.innerHTML += `<li>${content}</li>`
+    // const li = document.createElement("li");
+    // li.innerText = "new list item";
+    // ul.appendChild(li);
+  };
+  addItemsInUl("new item1")  
+  addItemsInUl("new item2")
+
+  const removeList = function (){
+      let list = document.querySelector('div ul')
+      list.remove()
+  }
+  removeList()

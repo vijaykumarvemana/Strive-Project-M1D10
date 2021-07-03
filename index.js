@@ -119,17 +119,17 @@ gettingIdContainer()
 const everyTdElement = function () {
     const everyTd = document.querySelectorAll(' td')
     for(let td of everyTd){
-    console.log(td.innerHTML)
+    console.log(td.innerHTML="text")
     }
 }
  everyTdElement()
-/*const addTableRow = function(){
-    let add = document.getElementsByTagName('.dotted td')
-    const extraRow = document.createElement('td')  
-    extraRow.innerText = 'vijay'
-    add.appendChild(extraRow)
+
+ const changeHead = function (){
+     const head = document.querySelector('h1')
+     head.innerText = 'MODULE-1-D-10'
  }
-addTableRow()*/
+ changeHead()
+
 const colorChange = function () {
     let links = document.querySelectorAll('a')
     for(let link of links){
@@ -152,3 +152,52 @@ const addItemsInUl = function (content) {
       list.remove()
   }
   removeList()
+
+
+      /*41) Add an eventListener to alert when the mouse is over a link, displaying the URL
+        42) Add a button to hide every image on the page
+        43) Add a button to hide and show the table from the page
+        44) Write a function to sum every number inside the TD (if the content is numeric)
+        45) Delete the last letter from the title each time the user clicks on it
+        46) Change a single TD background color when the user clicks on it
+        47) Add a button DELETE, on click it should delete a random TD from the page
+        48) Add a pink border to a cell when the mouse is over it
+        49) Write a function to add a table with 4 rows and 3 columns programmatically
+        50) Write a function to remove the table from the page
+        */
+const alertlinks =  function(){
+    const links = document.querySelectorAll('a')
+    for(link of links){
+        link.onmouseenter = function(event){
+            alert(event.target.href)
+        }
+    }
+}
+alertlinks()
+
+const hideImages = function () {
+    const btn = document.createElement("button")
+    btn.innerText = "Hide images"
+    btn.onclick = function () {
+      const imgs = document.querySelectorAll("img")
+      imgs.forEach((img) => {
+        img.classList.add("d-none")
+      })
+    }
+    const body = document.querySelector("body")
+    body.appendChild(btn)
+  }
+  hideImages()
+
+
+const toggleTable = function () {
+    const btn = document.createElement("button")
+    btn.innerText = "Toggle table"
+    btn.onclick = function () {
+      const table = document.querySelector("table")
+      table.classList.toggle("d-none")
+    }
+    const body = document.querySelector("body")
+    body.appendChild(btn);
+  }
+  toggleTable()

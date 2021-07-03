@@ -44,6 +44,8 @@ table, th, td {
        font-size: 35px;
        font-weight: bold;
    }
-   .hide{
+   .hidden{
        visibility: hidden;
    }
+   .d-none {
+    display: none;

@@ -265,4 +265,35 @@ const toggleTable = function () {
   addPinkBorder()
 
 
+  const createTable = function () {
+    const body = document.querySelector("body")
+    const table = document.createElement("table")
+    const tbody = document.createElement("tbody")
+    table.appendChild(tbody)
+    body.appendChild(table)
+    for (let i = 0; i < 5; i++) {
+      const tr = document.createElement("tr")
+      tbody.appendChild(tr)
+      for (let j = 0; j < 3; j++) {
+        if (i === 0) {
+          const th = document.createElement("th")
+          th.innerText = "Heading " + (j + 1)
+          tr.appendChild(th)
+        } else {
+          const td = document.createElement("td")
+          td.innerText = `Row ${i} Col ${j + 1}`
+          tr.appendChild(td);
+        }
+      }
+    }
+  }
+  
+
+  const removeTable = function () {
+    const table = document.querySelectorAll("table")[1]
+    table.remove()
+  }
+  removeTable()
+
+
 

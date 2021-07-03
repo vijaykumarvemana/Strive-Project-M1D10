@@ -49,3 +49,10 @@ table, th, td {
    }
    .d-none {
     display: none;
+   }
+   .bg-red {
+    background-color: red;
+  }
+  .border-pink {
+    border-color: pink;
+  }

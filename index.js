@@ -201,3 +201,68 @@ const toggleTable = function () {
     body.appendChild(btn);
   }
   toggleTable()
+
+
+
+  const sumNumbers = function () {
+    const tds = document.querySelectorAll("td")
+    let sum = 0
+    tds.forEach((td) => {
+      const toNumber = parseInt(td.innerText)
+      const isNotNumeric = isNaN(toNumber)
+      if (!isNotNumeric) {
+        sum += toNumber
+      }
+    })
+    alert(sum)
+  }
+  sumNumbers()
+
+
+  const deleteLastChar = function () {
+    const h1 = document.querySelector("h1")
+    h1.onclick = function (e) {
+      h1.innerText = h1.innerText.substring(0, h1.innerText.length - 1)
+    }
+  }
+  deleteLastChar()
+  const changeTdBg = function () {
+    const tds = document.querySelectorAll("td")
+    tds.forEach((td) => {
+      td.onclick = function (e) {
+        e.target.classList.toggle("bg-red")
+      }
+    })
+  }
+  changeTdBg()
+
+
+  const deleteRandom = function () {
+    const btn = document.createElement("button")
+    btn.innerText = "Delete random"
+    btn.onclick = function () {
+      const tds = document.querySelectorAll("td")
+      const random = Math.floor(Math.random() * tds.length)
+      tds[random].remove()
+    }
+    const body = document.querySelector("body")
+    body.appendChild(btn)
+  }
+
+  deleteRandom()
+
+  const addPinkBorder = function () {
+    const cells = document.querySelectorAll("td")
+    cells.forEach((td) => {
+      td.onmouseenter = function (e) {
+        e.target.classList.add("border-pink")
+      }
+      td.onmouseleave = function (e) {
+        e.target.classList.remove("border-pink")
+      }
+    })
+  }
+  addPinkBorder()
+
+
+
